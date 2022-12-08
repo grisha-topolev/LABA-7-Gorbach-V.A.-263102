@@ -1,0 +1,599 @@
+@keyframes wl1 {
+    0%{transform: rotate(0deg) translateY(0px) translateX(0px)}
+   100%{transform: rotate(45deg) translateY(17px) translateX(0px)}
+}
+@keyframes wl2 {
+    0%{transform: rotate(0deg) translateY(0px) translateX(0px)}
+   100%{transform: rotate(-45deg) translateY(-18px) translateX(0px)}
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+}
+.noscroll{
+    overflow: hidden;
+}
+a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+a:hover{
+    text-decoration-style: dashed;
+}
+.wrapper{
+    margin: 0 auto;
+    width: 100%;
+}
+.navigation{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background: white;
+    height: 80px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.logo{
+    margin-top: -10px;
+    margin-left: 10%;
+    font-size: 69px;
+    line-height: 80px;
+}
+.logo:hover {
+    animation: moving 0.2s ease-in forwards;
+}
+@keyframes moving {
+    100% {
+        margin-left: 13%;
+    }
+}
+.menu{
+    display: flex;
+}
+.nav-elem{
+    flex-grow: 1;
+    min-width: 100px;
+    flex-shrink: 1;
+    text-align: center;
+    font-size: 22px;
+    line-height: 80px;
+    cursor: pointer;
+    border-left: 2px solid black;
+}
+.nav-elem:hover{
+    background: #FFBCBC;
+}
+.nav-elem:last-child{
+    border-right: 2px solid black;
+}
+.customer{
+    margin-right: 10%;
+    text-align: right;
+    font-size: 22px;
+    line-height: 80px;
+}
+.customer:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.burger{
+    display: none;
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+}
+.elem-burger{
+    width: 40px;
+    border-radius: 5px;
+    height: 4px;
+    background: black;
+}
+.burger div:last-child{
+    position: absolute;
+    bottom: 0;
+}
+.elem-burger1{
+    transition: 0.3s;
+}
+.elem-burger1_active{
+    animation: wl1 0.3s linear 1 both;
+}
+.elem-burger2_active{
+    animation: wl2 0.3s linear 1 both;
+}
+
+header .content{
+    height: 720px;
+    display: flex;
+    padding-top: 80px;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../pictures/header.png');
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+    background-size: 488px 578px;
+}
+div.info{
+    width: 100%
+}
+header .content h1{
+    margin-top: 366px;
+    text-align: left;
+    padding-left: 3%;
+    font-size: 80px;
+}
+
+header .content a{
+    padding-left: 3%;
+    margin-left: 5px;
+}
+header .content a::after{
+  content: "";
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 2px;
+  width: 55px;
+  height: 15px;
+
+  background-image: url('../pictures/arrow.png');
+
+  background-size: 55px 15px;
+}
+main .people{
+    display: flex;
+    padding-top: 50px;
+    height: 620px;
+}
+.man{
+    background-image: url('../pictures/man.png');
+}
+.woman{
+    background-image: url('../pictures/woman.png');
+}
+.people div{
+    flex-grow: 1;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+}
+.choose_sex{
+    position: absolute;
+    text-transform: uppercase;
+    border: none;
+    font-size: 20;
+    background: #FFBCBC;
+    height: 110px;
+    width: 35%;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    transition: transform .2s;
+}
+.choose_sex:hover{
+    color: white;
+    font-size: larger;
+}
+.glasses{
+    margin-top: 190px;
+}
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-bottom: 2px solid black;
+}
+.header h2 {
+    display: inline-block;
+    position: relative;
+    font-weight: 700;
+    font-size: 70px;
+    width: 60%;
+    min-width: 300px;
+    line-height: 108px;
+    padding-left: 3%;
+    flex-grow: 6;
+}
+.glasses .header a{
+    flex-grow: 5;
+    text-align: right;
+    padding-right: 3%;
+}
+.glasses .header a:hover{
+    text-decoration: underline;
+}
+.glasses .content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 50px;
+    text-align: center;
+}
+.glasses .content div{
+    padding: 30px 0;
+    width: 30%;
+    min-width: 300px;
+} 
+.item  img {
+    width: 100%;
+}
+.item h4{
+    padding: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+}
+.item span{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+}
+.backspace{
+    margin-top: 50px;
+}
+.backspace_small{
+    margin-top: 30px;
+}
+
+.item p{
+    padding: 5px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+}
+.woman2{
+    background-image: url(../pictures/woman2.png);
+}
+.blue-backround{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #AABAD0;
+    padding-left: 10%;
+}
+.label{
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 108px;
+}
+.header h3 {
+    display: inline-block;
+    position: relative;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 108px;
+    padding-left: 3%;
+    flex-grow: 6;
+}
+.man2{
+    background-image: url(../pictures/man2.png);
+}
+.woman3{
+    background-image: url(../pictures/woman3.png);
+}
+.phrase-conainer{
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.phrase{
+    flex-grow: 1;
+    color: #FFBCBC;
+    font-size: 12.415vw;
+    font-weight: 700;
+}
+.phrase:hover{
+    text-shadow: 2px 2px 2px #FFBCBC;
+}
+.small{
+    font-size: 11.4vw;
+    font-weight: 700;
+}
+.shop{
+    position: absolute;
+    text-transform: uppercase;
+    border: none;
+    font-size: 20;
+    background: #FFBCBC;
+    height: 110px;
+    width: 35%;
+    left: 10%;
+    bottom: 0;
+    cursor: pointer;
+}
+.shop:hover{
+    transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+}
+section.about{
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+section.about .info{
+    width: 40%;
+    min-width: 320px;
+    margin-left: 10%;
+    margin-top: 50px;;
+    flex-grow: 1;
+    text-align: left;
+    font-size: 18px;
+    line-height: 30px;
+}
+section.about .photo{
+    margin-top: 50px;
+    padding: 0 10%;
+    width: 30%;
+    min-width: 320px;
+}
+.about .info p{
+    width: 90%;
+}
+.photo img{
+    width: 100%
+}
+.info h2{
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 70px;
+}
+footer{
+    width: 100%;
+    background-color: #AABAD0;
+}
+footer header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+}
+div.tagline{
+    line-height: 80px;
+    font-weight: 700;
+    padding-right: 5%;
+}
+footer div.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+dl{
+    flex-grow: 1;
+    padding: 5%;
+}
+dt{
+    font-weight: 700;
+
+}
+dd a{
+    text-transform: capitalize;
+}
+dd a:hover{
+    text-decoration: underline;
+}
+div.links {
+    display: flex;
+    justify-content: space-around;
+    width: 65%;
+    font-size: 20px;
+    line-height: 31px;
+}
+div.authors{
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid black;
+    min-width: 250px;
+    width: 25%;
+}
+.title-1{
+    position: relative;
+    width: 65%;
+    padding: 10%;
+}
+.title-1::after{
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 12%;
+    height: 2px;
+    width: 70%;
+    background: black;
+}
+.adress-info{
+    line-height: 30px;
+}
+.authors-adress{
+    padding: 10%;
+}
+.authors div.container{
+    display: flex;
+    width: 100%;
+}
+.title-2{
+    position: relative;
+    width: 65%;
+    padding: 10%;
+}
+.title-2::after{
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 12%;
+    height: 2px;
+    width: 70%;
+    background: black;
+}
+i:first-child{
+    margin-left: 5px;
+}
+i:last-child{
+    margin-left: 3px;
+}
+div.adress{
+    padding: 2%;
+}
+p a{
+    font-size: 12px;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+div.adress p{
+    font-size: 12px;
+    padding: 5px 0;
+}
+.adress p.adress-info{
+    font-size: 15px;
+    padding: 0;
+}
+.burger_menu{
+    visibility: hidden;
+    background: white;
+    position: fixed;
+    z-index: 1;
+    top: 80px;
+    width: 100vw;
+    height: 100vh;
+    transition: 0.5s cubic-bezier(0.37, 0, 0.63, 1);
+    opacity: 0;
+}
+.burger_menu_active{
+    visibility: visible;
+    opacity: 1;
+}
+.burger_nav{
+    transform: translateX(-100vw);
+}
+.burger_nav_active{
+    transform: translateX(0);
+    transition: 0.6s
+}
+
+div.burger_menu h3{
+    text-align: center;
+    padding: 60px 0;
+    font-size: 30px;
+    cursor: pointer;
+
+}
+div.burger_menu h3:hover{
+    transition: text-shadow 0.4s ease-out;
+    text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
+}
+
+
+@media (max-width: 768px){
+    main .people{
+        height: 1240px;
+        flex-direction: column;
+    }
+    header .content{
+        background-position: center center;
+    }
+    header .navigation .menu, .customer{
+        display: none;
+    }
+    header .content .info h1{
+        font-size: 50px;
+    }
+    .header h3, .header h2{
+        font-size: 50px;
+    }
+    .glasses .header a{
+        font-size: 12px;
+    }
+    .burger{
+        display: block;
+        cursor: pointer;
+    }
+    footer div.container{
+        flex-direction: column;
+    }
+    div.links {
+        width: 100%;
+        justify-content: space-between;
+    }
+    div.authors{
+        margin: 20px 0;
+        border-left: 0;
+        width: 100%;
+    }
+    .title-2{
+        margin: auto;
+        margin-top: 20px;
+        text-align: center;
+        border-bottom: 2px solid black;
+        padding: 5px;
+        width: 80%;
+    }
+    .title-2::after{
+        display: none;
+    }
+    div.authors-adress{
+        margin: auto;
+        padding: 0;
+    }
+    .adress-info{
+        margin-top: 15px;
+    }
+}
+@media (max-width: 480px){
+    header .content .info h1{
+        font-size: 40px;
+    }
+    header .content .info a{
+        line-height: 30px;
+        font-size: 0.8em;
+    }
+    header .content .info a:after{
+        margin-top: 7px;
+        font-size: 0.8em;
+    }
+    .header h2, .header h3{
+        width: 100%;
+    }
+    .glasses .header a{
+        margin-left: 3.5%;
+        text-align: left;
+    }
+    section.about .info{
+        margin-left: 0%;
+        text-align: justify;
+    }
+    .info p{
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+    .info h2{
+        text-align: center;
+        font-size: 50px;
+    }
+    section.about .photo{
+        padding: 0;
+    }
+    footer header{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    div.tagline{
+        padding: 0 10%;
+    }
+    div.links {
+        flex-direction: column;
+    }
+}
+.price:hover {
+    text-decoration: underline;
+}
